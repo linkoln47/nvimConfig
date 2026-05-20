@@ -1,0 +1,29 @@
+vim.g.mapleader = " "
+
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+
+vim.api.nvim_create_user_command("W", function()
+  vim.cmd("SudaWrite")
+end, {})
+
+vim.api.nvim_create_user_command("R", function()
+  vim.cmd("SudaRead")
+end, {})
+
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=4")
+vim.cmd("set shiftwidth=2")
+
+-- disable netrw
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("config.lazy")
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+
+require("nvim-tree").setup()
+
+vim.cmd.colorscheme("tokyonight")

@@ -1,0 +1,11 @@
+#swap / backup
+*.swp
+*.swo
+*~
+
+# local caches
+.cache/
+tmp/
+
+# local files
+.local.lua
