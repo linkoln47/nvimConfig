@@ -1,9 +1,13 @@
 vim.g.mapleader = " "
 
+vim.opt.expandtab = true
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
 
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
